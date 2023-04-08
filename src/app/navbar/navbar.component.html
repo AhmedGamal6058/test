@@ -1,0 +1,79 @@
+<nav>
+  <div class="leftLinks">
+    <div class="logo">
+      <a routerLink="/home">
+        <img src="../../assets/imgs/logo1.png" alt=""
+      /></a>
+    </div>
+    <div class="links" *ngIf="lang_key == 'ar'">
+      <a routerLink="#">عرض السعر</a>
+      <a routerLink="#">تواصل معنا</a>
+      <a routerLink="#" (click)="changelanguage('en')">English</a>
+    </div>
+    <div class="links" *ngIf="lang_key == 'en'">
+      <a routerLink="#">Solutions</a>
+      <a routerLink="#">Pricing</a>
+      <a routerLink="#">Company</a>
+      <a routerLink="#">Contact us</a>
+      <a
+        routerLink="#"
+        (click)="changelanguage('ar')"
+        style="font-family: Droid Arabic Kufi, arial, sans-serif"
+        >عربي</a
+      >
+    </div>
+  </div>
+  <div class="menu">
+    <i class="fa-solid fa-bars" (click)="showmenu()"></i>
+  </div>
+  <div class="sidnav" *ngIf="lang_key == 'en'">
+    <div class="sidnav-content">
+      <div class="logo" *ngIf="lang_key == 'en'">
+        <img src="../../assets/imgs/logo1.png" alt="" />
+        <img src="../../assets/imgs/logo2.png" alt="" />
+      </div>
+      <div class="sidnavlinks" (click)="hidemenu()">
+        <a routerLink="/home">Home</a>
+        <a routerLink="#">Solutions</a>
+        <a routerLink="#">Pricing</a>
+        <a routerLink="#">Company</a>
+        <a routerLink="#">Contact us</a>
+        <a routerLink="#">Get free trial</a>
+        <a routerLink="/login">Sign in</a>
+        <a
+          routerLink="#"
+          (click)="changelanguage('ar')"
+          style="font-family: Droid Arabic Kufi, arial, sans-serif"
+          >عربي</a
+        >
+      </div>
+    </div>
+    <div class="overlay" (click)="hidemenu()"></div>
+  </div>
+  <div class="sidnav ar" *ngIf="lang_key == 'ar'">
+    <div class="sidnav-content">
+      <div class="logo ar">
+        <img src="../../assets/imgs/logo1.png" alt="" />
+        <img src="../../assets/imgs/logo2.png" alt="" />
+      </div>
+      <div class="sidnavlinks ar" (click)="hidemenu()">
+        <a routerLink="/home">الرئيسية</a>
+        <a routerLink="#">عرض السعر</a>
+        <a routerLink="#">تواصل معنا</a>
+        <a routerLink="#">تجربة مجانية</a>
+        <a routerLink="/login">تسجيل دخول</a>
+        <a routerLink="#" (click)="changelanguage('en')">English</a>
+      </div>
+    </div>
+    <div class="overlay" (click)="hidemenu()"></div>
+  </div>
+  <div class="rightLinks" *ngIf="lang_key == 'en'">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <a routerLink="/login">Sign in</a>
+  </div>
+  <div class="rightLinks" *ngIf="lang_key == 'ar'">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <a routerLink="/login">تسجيل دخول</a>
+  </div>
+</nav>
+<div class="borderd"></div>

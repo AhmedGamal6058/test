@@ -1,0 +1,168 @@
+<div class="page">
+  <div class="content">
+    <app-navbar></app-navbar>
+    <div class="info" *ngIf="lang_key == 'en'">
+      <div class="text_info">
+        <h2>Efficiency and Savings</h2>
+      </div>
+      <div class="img_info">
+        <img src="../../../assets/imgs/scott-graham-5f.png" alt="" />
+      </div>
+    </div>
+    <div class="info ar" *ngIf="lang_key == 'ar'">
+      <div class="text_info">
+        <h2>الكفاءة والتوفير</h2>
+      </div>
+      <div class="img_info">
+        <img src="../../../assets/imgs/scott-graham-5f.png" alt="" />
+      </div>
+    </div>
+    <div *ngIf="lang_key == 'en'" class="efficiency">
+      <div class="sections">
+        <div class="sections-links">
+          <section id="sticky" class="en">
+            <p (click)="moveto(1)">Efficiency</p>
+            <p (click)="moveto(2)">Time Saving</p>
+          </section>
+        </div>
+        <div class="sections-content">
+          <h3 id="section1">Efficiency</h3>
+          <ul>
+            <li>
+              Reduced printing and paper costs: By storing all project data and
+              documents electronically, a project management system can help to
+              reduce the need for paper documents and printing, resulting in
+              cost savings.
+            </li>
+            <li>
+              Reduced overhead costs: By reducing the need for physical storage
+              and printing, a project management system can help to lower
+              overhead costs associated with physical office space and
+              equipment.
+            </li>
+            <li>
+              Reduced software costs: By having all project management functions
+              in one platform, a project management system can help to reduce
+              the need for multiple software solutions, resulting in cost
+              savings.
+            </li>
+            <li>
+              Reduced travel costs: By reducing the need for face-to-face
+              meetings and travel, a project management system can help to lower
+              travel expenses and lost productivity.
+            </li>
+            <li>
+              Reduced labor costs: By automating repetitive tasks, a project
+              management system can help to reduce the need for manual labor,
+              resulting in cost savings.
+            </li>
+            <li>
+              Reduced storage costs: By storing all project data and documents
+              electronically, a project management system can help to reduce the
+              need for physical storage space, resulting in cost savings.
+            </li>
+            <li>
+              Reduced legal and compliance costs: By ensuring all approvals and
+              sign-offs are done on time, a project management system can help
+              to avoid costly delays or non-compliance penalties.
+            </li>
+            <li>
+              Reduced staff turnover costs: By providing a central platform for
+              project management, a project management system can help to
+              improve team collaboration and reduce the risk of staff turnover,
+              which can save money on recruitment and training costs.
+            </li>
+            <li>
+              Reduced project duration costs: By streamlining communication and
+              reducing the risk of dropped tasks or missed deadlines, a project
+              management system can help teams to work more efficiently,
+              potentially reducing the overall time and costs required to
+              complete a project.
+            </li>
+            <li>
+              Reduced equipment costs: By reducing the need for physical storage
+              and printing, a project management system can help to reduce the
+              costs of equipment such as printers, scanners and storage devices.
+            </li>
+            <li>
+              Reduced administrative costs: By automating repetitive tasks and
+              streamlining communication, a project management system can help
+              to reduce the need for administrative labor, resulting in cost
+              savings.
+            </li>
+            <li>
+              Reduced training costs: By providing a central platform for
+              project management, a project management system can help to reduce
+              the need for training on multiple software solutions, resulting in
+              cost savings.
+            </li>
+            <li>
+              Reduced inventory costs: By providing real-time data and better
+              tracking, a project management system can help to optimize
+              inventory management and reduce unnecessary inventory costs.
+            </li>
+            <li>
+              Reduced data entry costs: By automating data entry and ensuring
+              data is accurate, a project management system can help to reduce
+              the need for manual data entry and related labor costs.
+            </li>
+            <li>
+              Reduced project management costs: By providing a central platform
+              for project management, a project management system can help to
+              reduce the need for multiple project management solutions and
+              related labor costs.
+            </li>
+          </ul>
+          <h3 id="section2">Time Saving</h3>
+          <ul>
+            <li>
+              Reduced meetings: By providing a central platform for project
+              management, a project management system can help to reduce the
+              need for face-to-face meetings, resulting in time savings.
+            </li>
+            <li>
+              Reduced administrative tasks: By automating repetitive tasks, a
+              project management system can help to reduce the need for
+              administrative labor, resulting in time savings.
+            </li>
+            <li>
+              Reduced data entry: By automating data entry and ensuring data is
+              accurate, a project management system can help to reduce the need
+              for manual data entry, resulting in time savings.
+            </li>
+            <li>
+              Reduced training time: By providing a central platform for project
+              management, a project management system can help to reduce the
+              need for training on multiple software solutions, resulting in
+              time savings.
+            </li>
+            <li>
+              Reduced project duration: By streamlining communication and
+              reducing the risk of dropped tasks or missed deadlines, a project
+              management system can help teams to work more efficiently,
+              potentially reducing the overall time required to complete a
+              project.
+            </li>
+            <li>
+              Reduced search time: By providing real-time data and better
+              tracking, a project management system can help to reduce the time
+              needed to search for information and documents.
+            </li>
+            <li>
+              Reduced project management time: By providing a central platform
+              for project management, a project management system can help to
+              reduce the need for multiple project management solutions and
+              related labor time.
+            </li>
+            <li>
+              Reduced decision making time: By providing real-time data and
+              better tracking, a project management system can help to reduce
+              the time needed to make informed decisions on project management.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

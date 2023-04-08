@@ -1,0 +1,26 @@
+.footer {
+  background-color: #000;
+}
+p {
+  font-size: 15px;
+  font-family: segoe "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 22px;
+  margin: auto;
+  padding: 10px;
+  color: #fff;
+  width: fit-content;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  p {
+    font-size: 17px;
+    line-height: 26px;
+    padding: 10px 38px;
+  }
+}
+@media (min-width: 992px) {
+  p {
+    font-size: 18px;
+  }
+}

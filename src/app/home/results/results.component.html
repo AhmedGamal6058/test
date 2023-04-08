@@ -1,0 +1,266 @@
+<div class="page">
+  <div class="content">
+    <app-navbar></app-navbar>
+    <div class="info" *ngIf="lang_key == 'en'">
+      <div class="text_info">
+        <div class="header">
+          <h2>Tests and results</h2>
+          <p>Automatic reminder for missing tests & result and more</p>
+        </div>
+        <p>Key Benefits of our XXXXXXXXX Feature</p>
+      </div>
+      <div class="img_info">
+        <img src="../../../assets/imgs/scott-graham-5f.png" alt="" />
+      </div>
+    </div>
+    <div class="info ar" *ngIf="lang_key == 'ar'">
+      <div class="text_info">
+        <div class="header">
+          <h2>الاختبارات والتقارير</h2>
+          <p>قم بمتابعة نتائج اختبارات التربة والخرسانة بشكل اسهل واسرع</p>
+        </div>
+        <p>
+          نتفهم أهمية رصد ومتابعة نتائج الاختبارات لذا قمنا بتسهيل وأتمتة
+          العملية
+        </p>
+      </div>
+      <div class="img_info">
+        <img src="../../../assets/imgs/scott-graham-5f.png" alt="" />
+      </div>
+    </div>
+    <div *ngIf="lang_key == 'ar'" class="results ar">
+      <div class="sections">
+        <div class="sections-links">
+          <section id="sticky">
+            <p (click)="moveto(1)">المزايا الرئيسية للخدمة</p>
+            <p (click)="moveto(2)">كيف تعمل الخدمة</p>
+            <p (click)="moveto(3)">أمثلة على استخدام الخدمة</p>
+            <p (click)="moveto(4)">المصادر</p>
+          </section>
+        </div>
+        <div class="sections-content">
+          <div id="section1">
+            <h3>المزايا الرئيسية للخدمة :</h3>
+            <p>
+              تقدم الخاصية مجموعة من المزايا للمساعدة في تحسين الأداء والجودة
+              مثل
+            </p>
+            <ul>
+              <li>
+                رفع الكفاءة الفنية: من خلال الخاصية يمكن طلب الاختبار تلقائيا من
+                المستخدمين ورفعه في أي وقت ومن أي مكان
+              </li>
+              <li>
+                تحسين الدقة: تمكنك الخدمة من تفصيل النتائج وتذكير للأعمال التي
+                لم يتم استكمالها أو إدراج النتيجة.
+              </li>
+              <li>توفير الوقت: الخدمة تقلل وقت وعناء المراجعة وفرز النتائج.</li>
+              <li>
+                المتابعة والتحكم: تساعدك الخدمة بمعرفة النتائج المقبولة
+                والمرفوضة والمعلقة.
+              </li>
+            </ul>
+          </div>
+          <div id="section2" (window:resize)="make_section_background('ar')">
+            <h3>كيف تعمل الخدمة ؟</h3>
+            <p>
+              كيفية استخدام الخدمة في المنصة دليل خطوة بخطوة لإنشاء الطلبات
+              باستخدام ناهض يعد استخدام خاصية متابعة النتائج أمرًا سهلاً.
+            </p>
+            <br />
+            <p>اتبع هذه الخطوات البسيطة:</p>
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li>قم بتسجيل الدخول إلى حساب ناهض الخاص بك</li>
+                  <li>انتقل إلى المشروع</li>
+                  <li>انقر فوق علامة "تقارير الاختبارات"</li>
+                  <li>اختر العملية</li>
+                  <li>اضف نتيجة الإختبار وارفع المستندات المؤيدة</li>
+                  <li>تأكد من صحة المعلومات المدخلة</li>
+                  <li>انقر فوق "إرسال"</li>
+                  <li>GIF</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <img src="./assets/imgs/how.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+          <h3 id="section3">أمثلة على استخدام الخدمة ؟</h3>
+          <p>
+            تم العمل على أرض الواقع واستخدامات واقعية حيث تم رفع وارشفة العديد
+            من النتائج للمواقع.
+          </p>
+          <div id="section4" class="ar">
+            <h3>المصادر</h3>
+            <div id="resources-nav">
+              <span (click)="choosecontent('videos', 1)" class="selected"
+                >فيديوهات</span
+              >
+              <span (click)="choosecontent('books', 2)">كتب</span>
+              <span (click)="choosecontent('questions', 3)"
+                >الاسئلة الشائعة</span
+              >
+            </div>
+            <div class="videos" *ngIf="content == 'videos'">
+              <div class="video">
+                <div class="video-header">
+                  <span><i class="fa-solid fa-video"></i></span>
+                  <h4>فيديو</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                  <div class="play_icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">شاهد الان </a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="video">
+                <div class="video-header">
+                  <span><i class="fa-solid fa-video"></i></span>
+                  <h4>فيديو</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                  <div class="play_icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">شاهد الان </a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="video">
+                <div class="video-header">
+                  <span><i class="fa-solid fa-video"></i></span>
+                  <h4>فيديو</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                  <div class="play_icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">شاهد الان </a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+            </div>
+            <div class="books" *ngIf="content == 'books'">
+              <div class="book">
+                <div class="book-header">
+                  <span><i class="fa-solid fa-book"></i></span>
+                  <h4>مستندات</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">أطلع علي المزيد</a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="book">
+                <div class="book-header">
+                  <span><i class="fa-solid fa-book"></i></span>
+                  <h4>مستندات</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">أطلع علي المزيد</a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="book">
+                <div class="book-header">
+                  <span><i class="fa-solid fa-book"></i></span>
+                  <h4>مستندات</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">أطلع علي المزيد</a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+            </div>
+            <section
+              id="questions"
+              class="questions"
+              *ngIf="content == 'questions'"
+            >
+              <div class="row ar" *ngIf="lang_key == 'ar'">
+                <div class="col">
+                  <div class="accordion1 accordion" (click)="accordion(1)">
+                    <h4>ما هو ناهض "NAHIDH"؟</h4>
+                    <div class="icon">
+                      <i class="fa-solid fa-plus rotateIcon"></i>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="accordionbody1 accordionbody ar">
+                    <p>
+                      ناهض هي منصة إدارة مشاريع مترابطة لإنجاز المهام بطرق اكثر
+                      كفاءة أعلى جودة وأقل تكلفة وقت
+                    </p>
+                  </div>
+                  <div class="accordion2 accordion" (click)="accordion(2)">
+                    <h4>لمن هي منصة ناهض "NAHIDH"؟</h4>
+                    <div class="icon">
+                      <i class="fa-solid fa-plus rotateIcon"></i>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="accordionbody2 accordionbody ar">
+                    <p>
+                      صممت منصة ناهض لخدمة أصحاب وملاك المشاريع للشركات الهندسية
+                      التصميم والإشراف وللمقاولين واي طرف ذات علاقة بمراحل
+                      المشروع
+                    </p>
+                  </div>
+                  <div class="accordion3 accordion" (click)="accordion(3)">
+                    <h4>هل منصة ناهض "NAHIDH"؟ لها شرح او مقاطع؟</h4>
+                    <div class="icon">
+                      <i class="fa-solid fa-plus rotateIcon"></i>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="accordionbody3 accordionbody ar">
+                    <p>نعم (انقر هنا).</p>
+                  </div>
+                  <div class="veiw-more">
+                    <a routerLink="#">لمزيد من الأسئلة المتداولة </a
+                    ><i class="fa-solid fa-angle-down"></i>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

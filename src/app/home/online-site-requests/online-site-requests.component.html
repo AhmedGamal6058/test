@@ -1,0 +1,591 @@
+<div class="page">
+  <div class="content">
+    <app-navbar></app-navbar>
+    <div class="info" *ngIf="lang_key == 'en'">
+      <div class="text_info">
+        <h2>Online Site requests</h2>
+        <p>
+          Simplify Site Request Management by creating your site requests from
+          anywhere with automatic attachment per-setup drawings and activity
+          pictures .., more
+        </p>
+        <p>
+          Streamline Site Request Processes with Nahidh Site Requests Feature
+          Create site requests from anywhere with the automatic attachment of
+          pre-setup drawings and activity pictures
+        </p>
+        <p>
+          At Nahidh, we understand the importance of streamlining the site
+          request process for engineers and the team. That's why we've
+          introduced our online request feature, which allows users to create
+          site requests from anywhere, at any time, with the added convenience
+          of automatic attachment of pre-setup drawings or activity pictures to
+          start inspecting the works or submitting the drawings, material, and
+          more
+        </p>
+      </div>
+      <div class="img_info">
+        <img src="../../../assets/imgs/scott-graham-5f.png" alt="" />
+      </div>
+    </div>
+    <div class="info ar" *ngIf="lang_key == 'ar'">
+      <div class="text_info">
+        <h2>النماذج الالكترونية</h2>
+        <p>
+          قمنا بتبسيط إدارة عمليات الموقع عن طريق إنشاء نموذج طلبات الاعتماد
+          بشكل الكتروني وبمزايا خاصة تمكنك من إدارة فواتير المشروع ورفع الجودة
+          والكفاءة الفنية وإصدار التقارير المميزة و نتفهم أهمية تبسيط عمليات
+          الموقع على فريق العمل ولهذا السبب طورنا الية التقديم، والتي تتيح لفريق
+          العمل إنشاء الطلبات من أي مكان وفي أي وقت ، مع مزايا اضافية تسهل وتسرع
+          من وتيرة العمل.
+        </p>
+      </div>
+      <div class="img_info">
+        <img src="../../../assets/imgs/scott-graham-5f.png" alt="" />
+      </div>
+    </div>
+    <div *ngIf="lang_key == 'en'" class="online-site">
+      <div class="sections">
+        <div class="sections-links">
+          <section id="sticky" class="en">
+            <p (click)="moveto(1)">Our Feature</p>
+            <p (click)="moveto(2)">How it works?</p>
+            <p (click)="moveto(3)">Examples</p>
+            <p (click)="moveto(4)">Resources</p>
+          </section>
+        </div>
+        <div class="sections-content">
+          <div id="section1">
+            <h3>With our feature, you can :</h3>
+            <p>
+              Improve efficiency: By allowing users to create site requests from
+              anywhere, anytime, you can save time and reduce the need for
+              face-to-face meetings.
+            </p>
+            <ul>
+              <li>
+                Improve efficiency, accuracy and save time with Nahidh's online
+                request feature Our online request feature offers a range of
+                benefits to help improve the site request process.
+              </li>
+              <li>
+                Improve accuracy: Automatic attachment of pre-setup drawings or
+                activity pictures or test&result ensures that all the necessary
+                information is included in the request, reducing errors and
+                increasing accuracy.
+              </li>
+              <li>
+                Save time: By automating repetitive tasks and simplifying the
+                site request process, you can save time and focus on more
+                important tasks.
+              </li>
+              <li>
+                Save and contrul Quantity: Keep your projects on track and
+                within budget. With this feature, you can easily track and
+                manage materials and quantities for your project, ensuring that
+                you stay within budget and on schedule.
+              </li>
+              <li>
+                Contrul site location: selection of the works site and level.
+              </li>
+            </ul>
+          </div>
+          <div id="section2" (window:resize)="make_section_background('en')">
+            <h3>How it works?</h3>
+            <p>
+              How to Use Nahidh's Online Request Feature A step-by-step guide to
+              creating site requests with Nahidh Using Nahidh's online request
+              feature is easy.
+            </p>
+            <p>Fullow these simple steps:</p>
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li>Log in to your Nahidh account</li>
+                  <li>Go to project</li>
+                  <li>Click on the "Request" tab</li>
+                  <li>Select site</li>
+                  <li>
+                    Fill out the request form with all the necessary information
+                  </li>
+                  <li>Attachments</li>
+                  <li>Click "Submit"</li>
+                  <li>GIF</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <img src="./assets/imgs/how.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <h3 id="section3">Examples of use</h3>
+          <p>Real-Life Applications of Nahidh's Request Feature</p>
+          <p>
+            See how our requests feature can be used in constructions site Our
+            requests feature can be used for a variety of tasks in constructions
+            , such as: ++++++or+tabs++++ everyone must make page
+          </p>
+          <ul>
+            <li>Work inspection requests</li>
+            <li>DSR</li>
+            <li>NCR</li>
+            <li>MSR</li>
+            <li>MIR</li>
+            <li>More....</li>
+          </ul>
+          <div id="section4">
+            <h3>Resources</h3>
+            <div id="resources-nav">
+              <span (click)="choosecontent('videos', 1)" class="selected"
+                >Videos</span
+              >
+              <span (click)="choosecontent('books', 2)">Books</span>
+              <span (click)="choosecontent('questions', 3)">Questions</span>
+            </div>
+            <div class="videos" *ngIf="content == 'videos'">
+              <div class="video">
+                <div class="video-header">
+                  <span><i class="fa-solid fa-video"></i></span>
+                  <h4>VIDEO</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                  <div class="play_icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <p>
+                  See how our Automatic Invoicing Feature can be used in real
+                  estate development
+                </p>
+                <a routerLink="#">Watch now</a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="video">
+                <div class="video-header">
+                  <span><i class="fa-solid fa-video"></i></span>
+                  <h4>VIDEO</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                  <div class="play_icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <p>
+                  See how our Automatic Invoicing Feature can be used in real
+                  estate development
+                </p>
+                <a routerLink="#">Watch now</a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="video">
+                <div class="video-header">
+                  <span><i class="fa-solid fa-video"></i></span>
+                  <h4>VIDEO</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                  <div class="play_icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <p>
+                  See how our Automatic Invoicing Feature can be used in real
+                  estate development
+                </p>
+                <a routerLink="#">Watch now</a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+            </div>
+            <div class="books" *ngIf="content == 'books'">
+              <div class="book">
+                <div class="book-header">
+                  <span><i class="fa-solid fa-book"></i></span>
+                  <h4>pdf</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                </div>
+                <p>
+                  By automating repetitive tasks and simplifying the site
+                  request process
+                </p>
+                <a routerLink="#"> Learn More </a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="book">
+                <div class="book-header">
+                  <span><i class="fa-solid fa-book"></i></span>
+                  <h4>pdf</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                </div>
+                <p>
+                  By automating repetitive tasks and simplifying the site
+                  request process
+                </p>
+                <a routerLink="#"> Learn More </a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="book">
+                <div class="book-header">
+                  <span><i class="fa-solid fa-book"></i></span>
+                  <h4>pdf</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                </div>
+                <p>
+                  By automating repetitive tasks and simplifying the site
+                  request process
+                </p>
+                <a routerLink="#"> Learn More </a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+            </div>
+            <div
+              id="questions"
+              class="questions"
+              *ngIf="content == 'questions'"
+            >
+              <div class="row" *ngIf="lang_key == 'en'">
+                <div class="col">
+                  <div class="accordion1 accordion" (click)="accordion(1)">
+                    <h4>What is NAHIDH?</h4>
+                    <div class="icon">
+                      <i class="fa-solid fa-plus rotateIcon"></i>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="accordionbody1 accordionbody">
+                    <p>
+                      NAHIDH is a platform that help’s to manage their project
+                      tasks more efficiently and effectively. It offers a wide
+                      range of features, including automated task tracking,
+                      technical, financial and legal task management, and
+                      advanced reporting and analytics
+                    </p>
+                  </div>
+                  <div class="accordion2 accordion" (click)="accordion(2)">
+                    <h4>Who is the NAHIDH platform for?</h4>
+                    <div class="icon">
+                      <i class="fa-solid fa-plus rotateIcon"></i>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="accordionbody2 accordionbody">
+                    <p>
+                      NAHIDH is designed for who need to automate all sites work
+                      and project managers who are looking for a more efficient
+                      and effective way to manage their project tasks and
+                      activities Like a real estate developer, consulting
+                      Engineering, Supervising, designer, contractors.
+                    </p>
+                  </div>
+                  <div class="accordion3 accordion" (click)="accordion(3)">
+                    <h4>Is there a free trial or demo available?</h4>
+                    <div class="icon">
+                      <i class="fa-solid fa-plus rotateIcon"></i>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="accordionbody3 accordionbody">
+                    <p>
+                      Yes, we offer a demo of the platform so that you can test
+                      it out for yourself and see the benefits firsthand.
+                    </p>
+                  </div>
+                  <div class="veiw-more">
+                    <a routerLink="#">View More</a
+                    ><i class="fa-solid fa-angle-down"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="lang_key == 'ar'" class="online-site ar">
+      <div class="sections">
+        <div class="sections-links">
+          <section id="sticky">
+            <p (click)="moveto(1)">المزايا الرئيسية للخدمة</p>
+            <p (click)="moveto(2)">كيف تعمل الخدمة</p>
+            <p (click)="moveto(3)">أمثلة على استخدام الخدمة</p>
+            <p (click)="moveto(4)">المصادر</p>
+          </section>
+        </div>
+        <div class="sections-content">
+          <div id="section1">
+            <h3>المزايا الرئيسية للخدمة :</h3>
+            <p>
+              تقدم خاصية إدارة العمليات مجموعة من المزايا للمساعدة في تحسين
+              الأداء والجودة مثل :
+            </p>
+            <ul>
+              <li>
+                رفع الكفاءة: من خلال الخاصية يمكن إنشاء وتسليم الطلب الكترونيا
+                لفريق العمل في اي وقت ومن اي مكان.
+              </li>
+              <li>
+                تحسين الدقة: يمكنك نظام ناهض من ضبط البنود وارفاق المخططات
+                التنفيذية وحصر الكميات الخاصة بموقع معين أو دور بشكل تلقائي عند
+                استخدام البند.
+              </li>
+              <li>
+                توفير الوقت: من خلال أتمتة المهام المتكررة وتبسيط عملية إنشاء
+                طلب جديد، يمكنك توفير الوقت والتركيز على المهام الأكثر أهمية.
+              </li>
+              <li>
+                المتابعة والتحكم في الكميات المعتمدة: حافظ على مشاريعك في المسار
+                الصحيح وفي حدود الميزانية. باستخدام هذه الميزة ، يمكنك بسهولة
+                تتبع وإدارة المواد والكميات الخاصة بمشروعك ، مما يضمن لك البقاء
+                في حدود الميزانية والجدول الزمني.
+              </li>
+              <li>
+                التحكم بمواقع العمل: يمكن تحديد مواقع مخصصة يتم الالتزام بها
+                لتسهيل الإدارة والمتابعة.
+              </li>
+            </ul>
+          </div>
+          <div id="section2" (window:resize)="make_section_background('ar')">
+            <h3>كيف تعمل الخدمة ؟</h3>
+            <p>
+              كيفية استخدام الخدمة في المنصة دليل خطوة بخطوة لإنشاء الطلبات
+              باستخدام ناهض يعد استخدام خاصية تقديم الطلبات أمرًا سهلاً.
+            </p>
+            <br />
+            <p>اتبع هذه الخطوات البسيطة :</p>
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li>قم بتسجيل الدخول إلى حساب ناهض الخاص بك</li>
+                  <li>انتقل إلى المشروع</li>
+                  <li>انقر فوق علامة "طلب"</li>
+                  <li>اختر الموقع او ادخل تفاصيل الموقع</li>
+                  <li>حدد الكمية في حالة يتطلب ذلك</li>
+                  <li>اضف المرفقات التابعة إن وجد</li>
+                  <li>تأكد من صحة المعلومات المدخلة</li>
+                  <li>انقر فوق "إرسال"</li>
+                  <li>GIF</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <img src="./assets/imgs/how.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <h3 id="section3">أمثلة على استخدام الخدمة ؟</h3>
+          <p>
+            تم العمل على أرض الواقع واستخدامات واقعية حيث تم اصدار اكثر من 100
+            الف عملية متنوعة في عدة مشاريع سكنية تابعة لمطوري عقار وجهات حكومية
+            راقبية وقطاع خاص تتجاوز 3000 مبنى ويمكن الاستفادة من الخدمة في
+            مجموعة متنوعة من النماذج والعمليات مثل :
+          </p>
+          <ul>
+            <li>
+              نموذج فحص العمل تمكنك الخدمة من تقديم طلب استلام الأعمال المنجزة
+              لغرض الاعتماد للاطلاع على التفاصيل ( اضغط هنا)
+            </li>
+            <li>
+              نموذج اعتماد المخططات تمكنك الخدمة من تقديم طلب لإعتماد المخططات
+              التنفيذية للاطلاع على التفاصيل ( اضغط هنا)
+            </li>
+            <li>
+              نموذج اعتماد المواد تمكنك الخدمة من تقديم طلب اعتماد المواد
+              والمواصفات الفنية لها للاطلاع على التفاصيل ( اضغط هنا)
+            </li>
+            <li>
+              نموذج اعتماد الموردين تمكنك الخدمة من تقديم طلب اعتماد الموردين
+              للاطلاع على التفاصيل ( اضغط هنا)
+            </li>
+            <li>
+              نموذج فحص المواد تمكنك الخدمة من تقديم طلب استلام المواد وفحصها
+              للاطلاع على التفاصيل ( اضغط هنا)
+            </li>
+            <li>
+              نموذج عدم المطابقة تمكنك الخدمة من إصدار النموذج والعمل على خطوات
+              المعالجة للاطلاع على التفاصيل ( اضغط هنا)
+            </li>
+            <li>
+              نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع للاطلاع
+              على التفاصيل ( اضغط هنا)
+            </li>
+          </ul>
+          <div id="section4" class="ar">
+            <h3>المصادر</h3>
+            <div id="resources-nav">
+              <span (click)="choosecontent('videos', 1)" class="selected"
+                >فيديوهات</span
+              >
+              <span (click)="choosecontent('books', 2)">كتب</span>
+              <span (click)="choosecontent('questions', 3)"
+                >الاسئلة الشائعة</span
+              >
+            </div>
+            <div class="videos" *ngIf="content == 'videos'">
+              <div class="video">
+                <div class="video-header">
+                  <span><i class="fa-solid fa-video"></i></span>
+                  <h4>فيديو</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                  <div class="play_icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">شاهد الان </a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="video">
+                <div class="video-header">
+                  <span><i class="fa-solid fa-video"></i></span>
+                  <h4>فيديو</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                  <div class="play_icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">شاهد الان </a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="video">
+                <div class="video-header">
+                  <span><i class="fa-solid fa-video"></i></span>
+                  <h4>فيديو</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                  <div class="play_icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">شاهد الان </a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+            </div>
+            <div class="books" *ngIf="content == 'books'">
+              <div class="book">
+                <div class="book-header">
+                  <span><i class="fa-solid fa-book"></i></span>
+                  <h4>مستندات</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">أطلع علي المزيد</a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="book">
+                <div class="book-header">
+                  <span><i class="fa-solid fa-book"></i></span>
+                  <h4>مستندات</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">أطلع علي المزيد</a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+              <div class="book">
+                <div class="book-header">
+                  <span><i class="fa-solid fa-book"></i></span>
+                  <h4>مستندات</h4>
+                </div>
+                <div class="img">
+                  <img src="../../assets/imgs/scott-graham-5f.png" alt="" />
+                </div>
+                <p>
+                  نموذج تعليمات موقع تمكنك الخدمة من إصدار التعليمات بالموقع
+                  للاطلاع على التفاصيل
+                </p>
+                <a routerLink="#">أطلع علي المزيد</a
+                ><i class="fa-solid fa-greater-than"></i>
+              </div>
+            </div>
+            <section
+              id="questions"
+              class="questions"
+              *ngIf="content == 'questions'"
+            >
+              <div class="row ar" *ngIf="lang_key == 'ar'">
+                <div class="col">
+                  <div class="accordion1 accordion" (click)="accordion(1)">
+                    <h4>ما هو ناهض "NAHIDH"؟</h4>
+                    <div class="icon">
+                      <i class="fa-solid fa-plus rotateIcon"></i>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="accordionbody1 accordionbody ar">
+                    <p>
+                      ناهض هي منصة إدارة مشاريع مترابطة لإنجاز المهام بطرق اكثر
+                      كفاءة أعلى جودة وأقل تكلفة وقت
+                    </p>
+                  </div>
+                  <div class="accordion2 accordion" (click)="accordion(2)">
+                    <h4>لمن هي منصة ناهض "NAHIDH"؟</h4>
+                    <div class="icon">
+                      <i class="fa-solid fa-plus rotateIcon"></i>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="accordionbody2 accordionbody ar">
+                    <p>
+                      صممت منصة ناهض لخدمة أصحاب وملاك المشاريع للشركات الهندسية
+                      التصميم والإشراف وللمقاولين واي طرف ذات علاقة بمراحل
+                      المشروع
+                    </p>
+                  </div>
+                  <div class="accordion3 accordion" (click)="accordion(3)">
+                    <h4>هل منصة ناهض "NAHIDH"؟ لها شرح او مقاطع؟</h4>
+                    <div class="icon">
+                      <i class="fa-solid fa-plus rotateIcon"></i>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="accordionbody3 accordionbody ar">
+                    <p>نعم (انقر هنا).</p>
+                  </div>
+                  <div class="veiw-more">
+                    <a routerLink="#">لمزيد من الأسئلة المتداولة </a
+                    ><i class="fa-solid fa-angle-down"></i>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

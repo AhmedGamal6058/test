@@ -1,0 +1,106 @@
+<div class="layout-container">
+  <section class="login-container">
+    <div class="widget-bg">
+      <figure class="widget-bg__figure">
+        <img src="assets/imgs/pexels-expect-best-323705-image.jpg" alt="" />
+      </figure>
+      <div class="elipses">
+        <img
+          src="assets/imgs/Ellipse 110.svg"
+          alt="imageCircle1"
+          class="ellipse-shadow"
+        />
+      </div>
+    </div>
+    <div class="elipses-top-right">
+      <img
+        src="assets/imgs/Ellipse 108.png"
+        alt="imageCircle2"
+        class="ellipse-shadow"
+      />
+    </div>
+    <div class="widget-login">
+      <header class="widget-login__header">
+        <figure class="widget-login__figure">
+          <a routerLink="/home">
+            <img src="assets/imgs/Image 2-image.png" alt="" />
+          </a>
+        </figure>
+        <h1 class="widget-login__title">Log in</h1>
+      </header>
+      <form [formGroup]="userForm">
+        <div class="widget-login__content">
+          <mat-form-field
+            appearance="outline"
+            [dir]="lang_key == 'ar' ? 'rtl' : 'ltr'"
+          >
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username" />
+            <mat-error
+              *ngIf="
+                userForm.controls['username'].touched &&
+                userForm.controls['username'].errors
+              "
+            >
+              {{
+                formManager.getErrorMessage(userForm, "username", "username")
+              }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field
+            [dir]="lang_key == 'ar' ? 'rtl' : 'ltr'"
+            appearance="outline"
+          >
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              [type]="hidePassword ? 'password' : 'text'"
+              formControlName="password"
+            />
+            <mat-icon
+              matSuffix
+              class="visibility-icon"
+              (click)="hidePassword = !hidePassword"
+              >{{ hidePassword ? "visibility_off" : "visibility" }}</mat-icon
+            >
+            <mat-error
+              *ngIf="
+                userForm.controls['password'].touched &&
+                userForm.controls['password'].errors
+              "
+            >
+              {{
+                formManager.getErrorMessage(userForm, "password", "password")
+              }}
+            </mat-error>
+          </mat-form-field>
+
+          <div class="form__footer">
+            <div class="text-right">
+              <label class="form__label">
+                <input type="checkbox" class="form__bool-input" />
+                Remember Me
+              </label>
+            </div>
+            <div class="text-left">
+              <a href="#">Forget Password?</a>
+            </div>
+          </div>
+        </div>
+        <footer class="widget-login__footer">
+          <button
+            class="button"
+            type="button"
+            (click)="
+              userForm.valid ? loginUser() : formManager.validateForm(userForm)
+            "
+            [disabled]="userForm.invalid"
+          >
+            Login
+          </button>
+          <a href="#">Don’t you have an account? Join Now</a>
+        </footer>
+      </form>
+    </div>
+  </section>
+</div>
